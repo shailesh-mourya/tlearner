@@ -35,9 +35,31 @@
     </style>
         <?php 
         include('config.php');
+        // function replaceDoubleQuotes($inputString) {
+        //     $outputString = str_replace('"', "'", $inputString);
+        //     return $outputString;
+        // }
+
+        // Assuming $conn is your mysqli connection
+// if (isset($_POST["submit"])) {
+//     $topic = mysqli_real_escape_string($conn, $_POST["topic"]);
+//     $content = mysqli_real_escape_string($conn, $_POST["editor"]);
+
+//     $sql = "INSERT INTO `bc_data` (`bc_topic`, `bc_content`) VALUES ('$topic', '$content')";
+
+//     if (mysqli_query($conn, $sql)) {
+//         header('location:concept_upload.php');
+//         exit();
+//     } else {
+//         echo "Please try again";
+//     }
+// }
+
+        
         if (isset($_POST["submit"])) {
             $topic=$_POST["topic"];
             $content=$_POST["editor"];
+            //$output = replaceDoubleQuotes($content);
             $sql="INSERT INTO `bc_data`(`bc_topic`, `bc_content`) VALUES ('$topic','$content');";
             
             if (mysqli_query($conn,$sql)) {

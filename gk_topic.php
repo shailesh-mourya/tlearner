@@ -40,7 +40,7 @@ while ($rows=mysqli_fetch_assoc($result)) {
         name=''
         id=''
         class='col col-sm-2 col-lg-3    m-2 btn btn-primary text-center'
-        href='gk.php?id={$rows['id']}'
+        href='gk.php?id={$rows['topic_name']}'
         role='button'
         >{$rows['topic_name']}</a
     >
