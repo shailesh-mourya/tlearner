@@ -18,12 +18,16 @@
         />
     </head>
 
-    <body>
+    <body style="background-color: #6200EE ;">
         <header>
             <!-- place navbar here -->
+            <?php 
+    include('header.php');
+    
+    ?>
         </header>
         <main>
-        <h3 class="h3 text-center mt-5 ">Choose Standard For Question Paper </h3>
+        <h3 class="h3 text-center mt-5 text-white ">Choose Standard For Question Paper </h3>
         <div class="conatiner m-2 col-lg-border border-3 ">
            
             <div class="row   justify-content-center ">
@@ -57,6 +61,7 @@ while ($rows=mysqli_fetch_assoc($result)) {
         
         <footer>
             <!-- place footer here -->
+
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script

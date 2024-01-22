@@ -12,13 +12,17 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
 
-<body>
+<body style="background-color: #6200EE ;">
     <header>
         <!-- place navbar here -->
+        <?php 
+        include('header.php');
+        
+        ?>
     </header>
     <main>
-        <div class="conatiner mt-5 mx-5">
-            <div class="row">
+        <div class="conatiner mt-5 ">
+            <div class="row justify-content-center">
                 <?php 
         include('config.php');
         $sql="SELECT * FROM `bc_data`;";
@@ -29,7 +33,7 @@
             <a
           name=''
           id=''
-          class='col col-sm-2 col-lg-12 m-2 btn btn-outline-primary text-lg-start'
+          class='col col-sm-2 col-lg-3  m-2 btn btn-primary text-center text-wrap'
           href='bc.php?id={$rows['id']}'
           role='button'
           >{$rows['bc_topic']}</a

@@ -18,10 +18,10 @@
       window.location.href = "basic_topic.php";
     }
     function textbookSolution() {
-      window.location.href = "filter.html";
+      window.location.href = "filter.php";
     }
     function testSolution() {
-      window.location.href = "filter.html"
+      window.location.href = "filter.php"
     }
     function gK() {
       window.location.href = "gk_topic.php";
@@ -30,15 +30,15 @@
       window.location.href = "paper_std.php";
     }
     function nimokeys() {
-      window.location.href = "filter.html";
+      window.location.href = "filter.php";
     }
   </script>
 
 </head>
 
-<body>
+<body style="background-color: #6200EE ;">
   <header>
-    <!-- place navbar here -->
+    <!-- place navbar here
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
       <div class="container">
 
@@ -87,7 +87,12 @@
 
         </div>
       </div>
-    </nav>
+    </nav> -->
+
+    <?php 
+    include('header.php');
+    
+    ?>
 
   </header>
 
@@ -131,41 +136,7 @@
 
 
 
-  <!-- sidebar -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">TLearner</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active  href=" #" aria-current="page">
-            <i class="bi bi-house-door-fill text-primary "></i> Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-person-fill text-primary"></i> About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-box-arrow-in-right text-primary"></i> Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-r-circle-fill text-primary"></i> Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"><i class="bi bi-telephone-fill text-primary"></i> Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="bi bi-share-fill text-primary"></i> Share
-          </a>
-        </li>
-
-      </ul>
-
-    </div>
-  </div>
+ 
 
   <!-- card -->
   <div class="container mt-5">
@@ -285,33 +256,11 @@
     </div>
   </div>
 
+  <?php 
+    include('footer.php');
+    
+    ?>
 
-  <!-- footer -->
-  <div class="container-fluid mt-5 bg-primary">
-    <div class="row">
-      <div class="col-lg-12  ">
-        <center>
-          <span>
-            <img src="image/logo.png" class="img-fluid d-inline mt-1" height="40px" width="40px" alt="">
-
-            <div class="display-6">TLearner</div>
-          </span>
-
-        </center>
-
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 col-sm-12 mt-2 mb-4 text-center">
-        Copyright &copy;
-        <a href="" class="text-warning">TLearner</a>
-        .Designed with <i class="bi bi-heart-fill text-danger "></i>
-        by
-        <a href="" class="text-warning">Shailesh Mourya</a>
-        All rights reserved.
-      </div>
-    </div>
-  </div>
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

@@ -18,9 +18,13 @@
         />
     </head>
 
-    <body>
+    <body style="background-color: #6200EE ;">
         <header>
             <!-- place navbar here -->
+            <?php 
+    include('header.php');
+    
+    ?>
         </header>
         <main>
         <h3 class="h3 text-center mt-5 ">G.K Topics</h3>
@@ -39,7 +43,7 @@ while ($rows=mysqli_fetch_assoc($result)) {
           <a
         name=''
         id=''
-        class='col col-sm-2 col-lg-3    m-2 btn btn-primary text-center'
+        class='col col-sm-2 col-lg-3  m-2 btn btn-primary text-center text-wrap'
         href='gk.php?id={$rows['topic_name']}'
         role='button'
         >{$rows['topic_name']}</a

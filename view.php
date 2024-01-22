@@ -20,7 +20,8 @@
         <?php 
             $id=$_GET["id"];
             include('config.php');
-             $sql="SELECT * FROM `q_paper` WHERE `standard`='10th std maharashtra board' AND `id`='$id';";
+            // $sql="SELECT * FROM `q_paper` WHERE `standard`='10th std maharashtra board' AND `id`='$id';";
+             $sql="SELECT * FROM `q_paper` WHERE `id`='$id';";
             $result=mysqli_query($conn,$sql);
             $rows=mysqli_fetch_assoc($result);
             echo "<div class='container'>

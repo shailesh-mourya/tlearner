@@ -17,54 +17,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
 </head>
 
-<body>
+<body style="background-color: #6200EE ;">
   <header>
-    <!-- place navbar here -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand text-center" href="#">
-          <img src="image/logo.png" class="img-fluid rounded-top" height="30px" width="30px" alt="" />
-          TLearner
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#" aria-current="page">Home <span
-                  class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="bi bi-share-fill text-primary"></i>
-              </a>
-            </li>
-            <li class="nav-item ms-5">
-              <a class="nav-link" href="#">
-                <i class="bi bi-person-circle"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <?php 
+    include('header.php');
+    
+    ?>
   </header>
   <main>
-    <div class="container border border-2 ">
+    <div class="container border border-2 " style="background-color: white ;">
       <div class="row">
         <div class="col-lg-12">
           <span>Your recent searches</span>
@@ -117,11 +78,11 @@
           <div class="col-lg-12">2. My Board</div>
           <div class="col-lg-12">
             <label class="border border-2 bg-success  container-fluid m-2">
-              <input type="radio" name="options" value="level1" onclick="hideContent();" checked />
+              <input type="radio" name="options2" value="level1" onclick="hideContent();" checked />
               CBSC
             </label>
             <label class="border border-2 bg-success  container-fluid m-2">
-              <input type="radio" name="options" value="level1" onclick="hideContent();" checked />
+              <input type="radio" name="options2" value="level1" onclick="hideContent();" checked />
               Maharashtra State Board
             </label>
           </div>

@@ -17,8 +17,9 @@
         <!-- place navbar here -->
     </header>
     <main>
-        <div class="container m-5">
-            <div class="row p-5">
+        <div class="container my-4">
+            <div class="row">
+
 
 
                 <?php 
@@ -27,8 +28,8 @@
     $sql="SELECT * FROM `bc_data` WHERE `id`='$id';";
     $result=mysqli_query($conn,$sql);
     $rows=mysqli_fetch_assoc($result);
-    echo "<h3>{$rows['bc_topic']}</h3>";
-    echo "{$rows['bc_content']}";
+    echo " <div class='col'>  <h3>{$rows['bc_topic']}</h3>";
+    echo "{$rows['bc_content']}</div>";
     
     ?>
 
