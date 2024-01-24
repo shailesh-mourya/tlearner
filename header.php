@@ -1,6 +1,15 @@
 <!-- place navbar here -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<nav class="navbar navbar-expand-sm mb-5 " style="background-color: #3700B3 ;">
+<style>
+  /* Apply the style to all text inside the navbar and offcanvas */
+  .navbar,
+  .navbar a,
+  .offcanvas,
+  .offcanvas a {
+    color: white !important;
+  }
+</style>
+<nav class="navbar navbar-expand-sm mb-5 " style="background-color: #3700B3 ; color:white !important; ">
     <div class="container">
         <a class="navbar-brand text-center" href="#">
             <img src="image/logo.png" class="img-fluid rounded-top " height="30px" width="30px" alt="">
