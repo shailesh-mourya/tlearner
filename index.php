@@ -12,7 +12,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
+  <link rel="stylesheet" href="style.css">
   <script>
     function basicConcepts() {
       window.location.href = "basic_topic.php";
@@ -36,7 +36,7 @@
 
 </head>
 
-<body style="background-color: #6200EE ;">
+<body>
   <header>
     <!-- place navbar here
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
@@ -136,7 +136,7 @@
 
 
 
- 
+
 
   <!-- card -->
   <div class="container mt-5">

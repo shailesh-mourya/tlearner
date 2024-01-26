@@ -13,6 +13,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script>
     //for My level
@@ -70,7 +71,7 @@
   </script>
 </head>
 
-<body style="background-color: #6200EE ;">
+<body>
   <header>
     <?php 
     include('header.php');
@@ -228,29 +229,10 @@
     </div>
   </main>
   <!-- footer -->
-  <div class="container-fluid mt-5 bg-primary">
-    <div class="row">
-      <div class="col-lg-12">
-        <center>
-          <span>
-            <img src="image/logo.png" class="img-fluid d-inline mt-1" height="40px" width="40px" alt="" />
-
-            <div class="display-6">TLearner</div>
-          </span>
-        </center>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-12 col-sm-12 mt-2 mb-4 text-center">
-        Copyright &copy;
-        <a href="" class="text-warning">TLearner</a>
-        .Designed with <i class="bi bi-heart-fill text-danger"></i>
-        by
-        <a href="" class="text-warning">Shailesh Mourya</a>
-        All rights reserved.
-      </div>
-    </div>
-  </div>
+  <?php 
+    include('footer.php');
+    
+    ?>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

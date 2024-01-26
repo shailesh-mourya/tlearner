@@ -12,72 +12,34 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
   <!-- bootstrap icon -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <!-- place navbar here -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand text-center" href="#">
-          <img src="image/logo.png" class="img-fluid rounded-top" height="30px" width="30px" alt="" />
-          TLearner
-        </a>
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#" aria-current="page">Home <span
-                  class="visually-hidden">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <i class="bi bi-share-fill text-primary"></i>
-              </a>
-            </li>
-            <li class="nav-item ms-5">
-              <a class="nav-link" href="#">
-                <i class="bi bi-person-circle"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  
+   <!-- place navbar here -->
+   <?php 
+        include('header.php');
+        
+        ?>
   </header>
   <main>
     <!-- question model -->
-    <div>
-      <h2 class="h2 text-center m-3 text-black bg-primary p-2">
-        Logical Reasoning:verbal
-      </h2>
+    <div class="m-1 m-lg-3" style="background-color:white">
 
-      
-        
-        
 
-       
-        <?php 
+      <?php 
         $topic=$_GET["id"];
         
         include('config.php');
         $sql="SELECT * FROM `gk_test` WHERE `topic_name`='$topic';";
         $result=mysqli_query($conn,$sql);
+        $rows=mysqli_fetch_assoc($result);
+        echo "<h1 class='h5 text-center mt-2'>General knowledge on topic {$rows['topic_name']}</h1>";
+        
+
         if (mysqli_num_rows($result)>0) {
 
          echo "<div class='container mt-2'>";
@@ -117,7 +79,7 @@
             
 
           }
-          echo "</ol>";
+          echo "</ol></div>";
 
 
         }
@@ -127,131 +89,9 @@
         
         
         ?>
+    </div>
 
 
-        
-<!--       
-      <div class="container mt-2">
-        <hr />
-        <p>1) what is the difference in the place value of 5 in the number</p>
-        <ol type="A">
-          <li>8</li>
-          <li>6</li>
-          <li>4</li>
-          <li>2</li>
-        </ol>
-
-        <p class="d-inline-flex gap-1">
-          <button class="btn" style="background-color: #f7eeee" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
-            <i class="bi bi-eye-fill"></i> Show Answer
-          </button>
-        </p>
-        <div class="collapse mb-1" id="collapseExample2">
-          <div class="card card-body">
-            <p><strong>Answer:</strong> B</p>
-
-            <p><strong>Explanation:</strong></p>
-
-            <p>
-              It is a simple division series in which each number is one-half
-              of the previous number. We can also say that each number is
-              divided by 2 to arrive at the next number;
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container mt-2">
-        <hr />
-        <p>1) what is the difference in the place value of 5 in the number</p>
-        <ol type="A">
-          <li>8</li>
-          <li>6</li>
-          <li>4</li>
-          <li>2</li>
-        </ol>
-
-        <p class="d-inline-flex gap-1">
-          <button class="btn" style="background-color: #f7eeee" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
-            <i class="bi bi-eye-fill"></i> Show Answer
-          </button>
-        </p>
-        <div class="collapse mb-1" id="collapseExample3">
-          <div class="card card-body">
-            <p><strong>Answer:</strong> B</p>
-
-            <p><strong>Explanation:</strong></p>
-
-            <p>
-              It is a simple division series in which each number is one-half
-              of the previous number. We can also say that each number is
-              divided by 2 to arrive at the next number;
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container mt-2">
-        <hr />
-        <p>1) what is the difference in the place value of 5 in the number</p>
-        <ol type="A">
-          <li>8</li>
-          <li>6</li>
-          <li>4</li>
-          <li>2</li>
-        </ol>
-
-        <p class="d-inline-flex gap-1">
-          <button class="btn" style="background-color: #f7eeee" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
-            <i class="bi bi-eye-fill"></i> Show Answer
-          </button>
-        </p>
-        <div class="collapse mb-1" id="collapseExample2">
-          <div class="card card-body">
-            <p><strong>Answer:</strong> B</p>
-
-            <p><strong>Explanation:</strong></p>
-
-            <p>
-              It is a simple division series in which each number is one-half
-              of the previous number. We can also say that each number is
-              divided by 2 to arrive at the next number;
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container mt-2">
-        <hr />
-        <p>1) what is the difference in the place value of 5 in the number</p>
-        <ol type="A">
-          <li>8</li>
-          <li>6</li>
-          <li>4</li>
-          <li>2</li>
-        </ol>
-
-        <p class="d-inline-flex gap-1">
-          <button class="btn" style="background-color: #f7eeee" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
-            <i class="bi bi-eye-fill"></i> Show Answer
-          </button>
-        </p>
-        <div class="collapse mb-1" id="collapseExample3">
-          <div class="card card-body">
-            <p><strong>Answer:</strong> B</p>
-
-            <p><strong>Explanation:</strong></p>
-
-            <p>
-              It is a simple division series in which each number is one-half
-              of the previous number. We can also say that each number is
-              divided by 2 to arrive at the next number;
-            </p>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
     <!-- sidebar -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">

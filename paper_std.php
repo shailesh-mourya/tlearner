@@ -16,9 +16,10 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="style.css">
     </head>
 
-    <body style="background-color: #6200EE ;">
+    <body>
         <header>
             <!-- place navbar here -->
             <?php 
@@ -27,7 +28,7 @@
     ?>
         </header>
         <main>
-        <h3 class="h3 text-center mt-5 text-white ">Choose Standard For Question Paper </h3>
+        <h3 class="h3 text-center mt-5  ">Choose Standard For Question Paper </h3>
         <div class="conatiner m-2 col-lg-border border-3 ">
            
             <div class="row   justify-content-center ">
