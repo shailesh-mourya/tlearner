@@ -29,9 +29,10 @@
         </header>
         <main>
         <h3 class="h3 text-center mt-5 ">G.K Topics</h3>
-        <div class="conatiner m-2 col-lg-border border-3 ">
+        <div class="container d-lg-flex flex-lg-wrap justify-content-center">
            
-            <div class="row   justify-content-center ">
+          
+                
                 
         <?php 
 include('config.php');
@@ -41,20 +42,22 @@ $result=mysqli_query($conn,$sql);
 while ($rows=mysqli_fetch_assoc($result)) {
 
         echo "
-          <a
-        name=''
-        id=''
-        class='col col-sm-2 col-lg-3  m-2 btn btn-primary text-center text-wrap'
-        href='gk.php?id={$rows['topic_name']}'
-        role='button'
-        >{$rows['topic_name']}</a
-    >
+        
+                  <a
+                name=''
+                id=''
+                class='container-fluid col-xs-2 col-sm-2 col-lg-3 mt-2 m-lg-2 btn btn-primary text-center'
+                href='gk.php?id={$rows['topic_name']}'
+                role='button'
+                >{$rows['topic_name']}</a
+            >
+       
     ";
 }
 
 
 ?>
-      </div>
+    
         </div>
 
         </main>
@@ -62,6 +65,10 @@ while ($rows=mysqli_fetch_assoc($result)) {
         
         <footer>
             <!-- place footer here -->
+            <?php 
+    include('footer.php');
+    
+    ?>
         </footer>
         <!-- Bootstrap JavaScript Libraries -->
         <script

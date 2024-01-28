@@ -29,9 +29,9 @@
         </header>
         <main>
         <h3 class="h3 text-center mt-5  ">Choose Standard For Question Paper </h3>
-        <div class="conatiner m-2 col-lg-border border-3 ">
+        <div class="container d-lg-flex flex-lg-wrap justify-content-center">
            
-            <div class="row   justify-content-center ">
+           
                 
         <?php 
 include('config.php');
@@ -44,7 +44,7 @@ while ($rows=mysqli_fetch_assoc($result)) {
           <a
         name=''
         id=''
-        class='col col-sm-2 col-lg-3    m-2 btn btn-primary text-center'
+        class='container-fluid col-xs-2 col-sm-2 col-lg-3 mt-2 m-lg-2 btn btn-primary text-center'
         href='paper.php?standard={$rows['standard']}'
         role='button'
         >{$rows['standard']}</a
@@ -54,7 +54,7 @@ while ($rows=mysqli_fetch_assoc($result)) {
 
 
 ?>
-      </div>
+     
         </div>
 
         </main>
@@ -62,6 +62,10 @@ while ($rows=mysqli_fetch_assoc($result)) {
         
         <footer>
             <!-- place footer here -->
+            <?php 
+    include('footer.php');
+    
+    ?>
 
         </footer>
         <!-- Bootstrap JavaScript Libraries -->

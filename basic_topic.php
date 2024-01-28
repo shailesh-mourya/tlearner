@@ -22,8 +22,8 @@
         ?>
     </header>
     <main>
-        <div class="conatiner mt-5 ">
-            <div class="row justify-content-center">
+        <div class="container d-lg-flex flex-lg-wrap justify-content-center ">
+            
                 <?php 
         include('config.php');
         $sql="SELECT * FROM `bc_data`;";
@@ -31,14 +31,16 @@
          while ($rows=mysqli_fetch_assoc($result)) {
 
             echo "
+          
             <a
           name=''
           id=''
-          class='col col-sm-2 col-lg-3  m-2 btn btn-primary text-center text-wrap'
+          class='container-fluid col-xs-2 col-sm-2 col-lg-3 mt-2 m-lg-2 btn btn-primary text-center'
           href='bc.php?id={$rows['id']}'
           role='button'
           >{$rows['bc_topic']}</a
       >
+     
       ";
          }
 
@@ -46,7 +48,7 @@
 
 
         ?>
-            </div>
+          
 
         </div>
 
@@ -55,6 +57,10 @@
     </main>
     <footer>
         <!-- place footer here -->
+        <?php 
+    include('footer.php');
+    
+    ?>
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

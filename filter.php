@@ -84,91 +84,96 @@
         <div class="col-lg-12">
           <span>Your recent searches</span>
         </div>
+      </div>
+      <div class="row">
         <div class="col-lg-10 m-3 ">
           <form action="" method="post">
             <div class="input-group mb-3 ">
               <input type="search" class="form-control" placeholder="Ask me!" aria-label="Recipient's username"
                 aria-describedby="button-addon2" />
-              <button class="btn btn-success" type="button" id="search_btn" value="search">
+              <button class="btn btn-success me-3" type="button" id="search_btn" value="search">
                 Go
               </button>
             </div>
           </form>
         </div>
+      </div>
+      <div class="row">
         <div class="col-lg-12 text-lg-center">
           <span class="">OR</span>
         </div>
-        <div class="row">
-          <div class="col-lg-12">1. My Board</div>
-          <div class="col-lg-12">
-            <label class="border border-2 bg-success  container-fluid m-2">
-              <input type="radio" name="options2" value="level1" style="display:none" />
-              CBSC
-            </label>
-            <label class="border border-2 bg-success  container-fluid m-2">
-              <input type="radio" name="options2" value="level2" style="display:none" />
-              Maharashtra State Board
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">2. My Level</div>
-          <div class="col-lg-12">
-            <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="1to4">
-              <input type="radio" name="option" value="level1" style="display:none" />
-              1st to 4th
-            </label>
-
-            <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="5to8">
-              <input type="radio" name="option" value="level2" style="display:none" />
-              5th to 8th
-            </label>
-            <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="9to10">
-              <input type="radio" name="option" value="level3" style="display:none" />
-              9th to 10th
-            </label>
-            <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="11to12">
-              <input type="radio" name="option" value="level4" style="display:none" />
-              11th to 12th
-            </label>
-            <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="btog">
-              <input type="radio" name="option" value="level5" style="display:none" />
-              Bachelor/Graduate
-            </label>
-            <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="mtopg">
-              <input type="radio" name="option" value="level6" style="display:none" />
-              Master/Post Graduate
-            </label>
-
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">3. Standard</div>
-        </div>
-        <!-- 1st to 4th -->
-        <div class="row" style="display:none" id="4to1">
-          <div class="col-lg-12">
-            <label class="border border-2 bg-success  container-fluid m-2">
-              <input type="radio" name="options3" value="1st std" style="display:none" />
-              1st Standard
-            </label>
-            <label class="border border-2 bg-success  container-fluid m-2">
-              <input type="radio" name="options3" value="2nd std" style="display:none" />
-              2nd Standard
-            </label>
-            <label class="border border-2 bg-success  container-fluid m-2">
-              <input type="radio" name="options3" value="3rd std" style="display:none" />
-              3rd Standard
-            </label>
-            <label class="border border-2 bg-success  container-fluid m-2">
-              <input type="radio" name="options3" value="4th std" style="display:none" />
-              4th Standard
-            </label>
-          </div>
-        </div>
-
       </div>
+      <div class="row">
+        <div class="col-lg-12">1. My Board</div>
+        <div class="col-lg-12">
+          <label class="border border-2 bg-success  container-fluid m-2">
+            <input type="radio" name="options2" value="level1" style="display:none" />
+            CBSC
+          </label>
+          <label class="border border-2 bg-success  container-fluid m-2">
+            <input type="radio" name="options2" value="level2" style="display:none" />
+            Maharashtra State Board
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">2. My Level</div>
+        <div class="col-lg-12">
+          <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="1to4">
+            <input type="radio" name="option" value="level1" style="display:none" />
+            1st to 4th
+          </label>
+
+          <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="5to8">
+            <input type="radio" name="option" value="level2" style="display:none" />
+            5th to 8th
+          </label>
+          <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="9to10">
+            <input type="radio" name="option" value="level3" style="display:none" />
+            9th to 10th
+          </label>
+          <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="11to12">
+            <input type="radio" name="option" value="level4" style="display:none" />
+            11th to 12th
+          </label>
+          <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="btog">
+            <input type="radio" name="option" value="level5" style="display:none" />
+            Bachelor/Graduate
+          </label>
+          <label class="border border-2 bg-success text-center m-2" style="width: 200px" id="mtopg">
+            <input type="radio" name="option" value="level6" style="display:none" />
+            Master/Post Graduate
+          </label>
+
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">3. Standard</div>
+      </div>
+      <!-- 1st to 4th -->
+      <div class="row" style="display:none" id="4to1">
+        <div class="col-lg-12">
+          <label class="border border-2 bg-success  container-fluid m-2">
+            <input type="radio" name="options3" value="1st std" style="display:none" />
+            1st Standard
+          </label>
+          <label class="border border-2 bg-success  container-fluid m-2">
+            <input type="radio" name="options3" value="2nd std" style="display:none" />
+            2nd Standard
+          </label>
+          <label class="border border-2 bg-success  container-fluid m-2">
+            <input type="radio" name="options3" value="3rd std" style="display:none" />
+            3rd Standard
+          </label>
+          <label class="border border-2 bg-success  container-fluid m-2">
+            <input type="radio" name="options3" value="4th std" style="display:none" />
+            4th Standard
+          </label>
+        </div>
+      </div>
+
+
       <!-- 5th to 8th -->
       <div class="row" style="display:none" id="8to5">
         <div class="col-lg-12">
