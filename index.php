@@ -21,7 +21,7 @@
       window.location.href = "text_solution.php";
     }
     function testSolution() {
-      window.location.href = "filter.php"
+      window.location.href = "test_question.php"
     }
     function gK() {
       window.location.href = "gk_topic.php";

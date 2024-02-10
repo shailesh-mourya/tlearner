@@ -28,8 +28,10 @@
     <main>
         <!-- question model -->
 
-        <div class="m-1 m-lg-3" style="background-color:white">
-            <p class="m-3 sticky-top ">Time left: <span id="timer" class="text-danger"></span></p>
+        <div class="m-1 m-lg-3 rounded-2" style="background-color:white">
+            <p class="m-3 sticky-top text-center rounded bg-primary" style="opacity: 90%;">Time left:
+                <span id="timer" class="text-danger text-center"></span>
+            </p>
             <script>
                 var timeLeft = 300; // 5 minutes countdown
                 function startTimer() {
@@ -58,24 +60,20 @@
         if (mysqli_num_rows($result)>0) {
 
          echo "<div class='container mt-2'>";
-         echo "<form action='submit_test.php' method='post'><ol type='1'>";
+         echo "<form action='process_test.php' method='post'><ol type='1'>";
 
-          while ($rows=mysqli_fetch_assoc($result)) {
-            echo "
-            <hr />";
-            //echo "<p>{$rows['gk_question']}</p>";
-            echo "<li><p>{$rows['gk_question']}</p></li>";
-            echo "<ol type='A'>
-            <li><input class='form-check-input  mx-1' name='r{$rows['id']}' type='radio' value='' id='checkbox1'>{$rows['gk_option1']}</li>
-            <li><input class='form-check-input  mx-1' name='r{$rows['id']}' type='radio' value='' id='checkbox1'>{$rows['gk_option2']}</li>
-            <li><input class='form-check-input  mx-1' name='r{$rows['id']}' type='radio' value='' id='checkbox1'>{$rows['gk_option3']}</li>
-            <li><input class='form-check-input  mx-1' name='r{$rows['id']}' type='radio' value='' id='checkbox1'>{$rows['gk_option4']}</li>
-          </ol>";
-         
-        
+            while ($rows = mysqli_fetch_assoc($result)) {
+                echo "<hr />";
+                echo "<li><p>{$rows['gk_question']}</p></li>";
+                echo "<input type='hidden' name='r{$rows['id']}' type='radio' value='' checked>";
+                echo "<ol type='A'>
+                    <li><input class='form-check-input  mx-1' name='r{$rows['id']}' type='radio' value='{$rows['gk_option1']}' id='checkbox1'>{$rows['gk_option1']}</li>
+                    <li><input class='form-check-input  mx-1' name='r{$rows['id']}' type='radio' value='{$rows['gk_option2']}' id='checkbox2'>{$rows['gk_option2']}</li>
+                    <li><input class='form-check-input  mx-1' name='r{$rows['id']}' type='radio' value='{$rows['gk_option3']}' id='checkbox3'>{$rows['gk_option3']}</li>
+                    <li><input class='form-check-input  mx-1' name='r{$rows['id']}' type='radio' value='{$rows['gk_option4']}' id='checkbox4'>{$rows['gk_option4']}</li>
+                </ol>";
+            }
             
-
-          }
           echo "</ol></div>";
 
 

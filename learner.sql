@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2024 at 09:53 PM
+-- Generation Time: Feb 10, 2024 at 08:31 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -268,7 +268,8 @@ INSERT INTO `gk_test` (`id`, `topic_name`, `gk_question`, `gk_option1`, `gk_opti
 (198, 'Political of India', 'Who is the first and only female Chief Minister of Delhi?', 'Sheila Dikshit', 'Sushma Swaraj', 'Mayawati', 'Mamata Banerjee', 'Sheila Dikshit', 'Sheila Dikshit was the first and only female Chief Minister of Delhi, serving for three consecutive terms.'),
 (199, 'Political of India', 'Which Indian state has the highest number of Rajya Sabha seats?', 'Uttar Pradesh', 'Maharashtra', 'West Bengal', 'Bihar', 'Uttar Pradesh', 'Uttar Pradesh has the highest number of Rajya Sabha seats.'),
 (200, 'keyboard', 'how many keys are there in keyboard', '101', '102', '103', '104', '102', 'yudtyjfghfg'),
-(201, 'keyboard', 'how many navigation key are there in keyboard', '4', '3', '2', '1', '4', 'sdfsfsdfsdfsdfsd');
+(201, 'keyboard', 'how many navigation key are there in keyboard', '4', '3', '2', '1', '4', 'sdfsfsdfsdfsdfsd'),
+(202, 'ocean', 'which is largest ocean in the world ?', 'blue', 'red', 'green', 'orange', 'red', 'red is my fav that why');
 
 -- --------------------------------------------------------
 
@@ -365,7 +366,8 @@ INSERT INTO `t_solution` (`id`, `std`, `subject`, `chapter`, `section`, `questio
 (2, '10th', 'Mathematics', 'Algebra', 'Equations', '2', 'Factorize the expression: 2x^2 + 8x', 'Factor out the common factor 2x: 2x(x + 4).', '22'),
 (3, '10th', 'Mathematics', 'Algebra', 'Inequalities', '3', 'Solve the inequality: 3x - 7 > 10', 'Add 7 to both sides: 3x > 17. Then, divide both sides by 3 to isolate x: x > 5.67 (rounded to two decimal places).', '30'),
 (4, '10th', 'Mathematics', 'Algebra', 'Introduction', '1', 'Solve for x: 2x + 3 = 11', 'Starting with the given equation, subtract 3 from both sides: 2x = 8. Then, divide both sides by 2 to isolate x: x = 4.', '15'),
-(5, '5th', 'science', 'Reflection of light', 'Exercise', 'Q 1', '<p>what is light ?</p>', '<h6 style=\"margin-left:0px;\"><strong style=\"--tw-backdrop-blur:;--tw-backdrop-brightness:;--tw-backdrop-contrast:;--tw-backdrop-grayscale:;--tw-backdrop-hue-rotate:;--tw-backdrop-invert:;--tw-backdrop-opacity:;--tw-backdrop-saturate:;--tw-backdrop-sepia:;--tw-blur:;--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-brightness:;--tw-contrast:;--tw-drop-shadow:;--tw-gradient-from-position:;--tw-gradient-to-position:;--tw-gradient-via-position:;--tw-grayscale:;--tw-hue-rotate:;--tw-invert:;--tw-numeric-figure:;--tw-numeric-fraction:;--tw-numeric-spacing:;--tw-ordinal:;--tw-pan-x:;--tw-pan-y:;--tw-pinch-zoom:;--tw-ring-color:rgba(69,89,164,.5);--tw-ring-inset:;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 transparent;--tw-ring-offset-width:0px;--tw-ring-shadow:0 0 transparent;--tw-rotate:0;--tw-saturate:;--tw-scale-x:1;--tw-scale-y:1;--tw-scroll-snap-strictness:proximity;--tw-sepia:;--tw-shadow-colored:0 0 transparent;--tw-shadow:0 0 transparent;--tw-skew-x:0;--tw-skew-y:0;--tw-slashed-zero:;--tw-translate-x:0;--tw-translate-y:0;border:0px solid rgb(217, 217, 227);box-sizing:border-box;color:var(--tw-prose-bold);\">Physical Light:</strong></h6><p>Light is a form of electromagnetic radiation that is visible to the human eye. It includes a spectrum of colors ranging from violet to red. Light is essential for vision, and it plays a crucial role in various natural processes.</p>', '111');
+(5, '5th', 'science', 'Reflection of light', 'Exercise', 'Q 1', '<p>what is light ?</p>', '<h6 style=\"margin-left:0px;\"><strong style=\"--tw-backdrop-blur:;--tw-backdrop-brightness:;--tw-backdrop-contrast:;--tw-backdrop-grayscale:;--tw-backdrop-hue-rotate:;--tw-backdrop-invert:;--tw-backdrop-opacity:;--tw-backdrop-saturate:;--tw-backdrop-sepia:;--tw-blur:;--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-brightness:;--tw-contrast:;--tw-drop-shadow:;--tw-gradient-from-position:;--tw-gradient-to-position:;--tw-gradient-via-position:;--tw-grayscale:;--tw-hue-rotate:;--tw-invert:;--tw-numeric-figure:;--tw-numeric-fraction:;--tw-numeric-spacing:;--tw-ordinal:;--tw-pan-x:;--tw-pan-y:;--tw-pinch-zoom:;--tw-ring-color:rgba(69,89,164,.5);--tw-ring-inset:;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 transparent;--tw-ring-offset-width:0px;--tw-ring-shadow:0 0 transparent;--tw-rotate:0;--tw-saturate:;--tw-scale-x:1;--tw-scale-y:1;--tw-scroll-snap-strictness:proximity;--tw-sepia:;--tw-shadow-colored:0 0 transparent;--tw-shadow:0 0 transparent;--tw-skew-x:0;--tw-skew-y:0;--tw-slashed-zero:;--tw-translate-x:0;--tw-translate-y:0;border:0px solid rgb(217, 217, 227);box-sizing:border-box;color:var(--tw-prose-bold);\">Physical Light:</strong></h6><p>Light is a form of electromagnetic radiation that is visible to the human eye. It includes a spectrum of colors ranging from violet to red. Light is essential for vision, and it plays a crucial role in various natural processes.</p>', '111'),
+(6, '9th ', 'math', 'algerbaric ', 'practice ', '2', '<p>Write the names of angles</p><figure class=\"image image-style-align-left image_resized\" style=\"width:30.74%;\"><img class=\"img-fluid\" style=\"aspect-ratio:736/736;\" src=\"https://i.pinimg.com/736x/9e/99/cb/9e99cbcd16ed812f8d84b9432afa3a2b.jpg\" alt=\"Parts of The Circle by @XSapien, Parts of the circle diagram ...\" width=\"736\" height=\"736\"></figure>', '<p>This the answer of the given question</p><figure class=\"image image-style-align-right image_resized\" style=\"width:30.74%;\"><img class=\"img-fluid\" style=\"aspect-ratio:736/736;\" src=\"https://i.pinimg.com/736x/9e/99/cb/9e99cbcd16ed812f8d84b9432afa3a2b.jpg\" alt=\"Parts of The Circle by @XSapien, Parts of the circle diagram ...\" width=\"736\" height=\"736\"></figure>', '123');
 
 --
 -- Indexes for dumped tables
@@ -409,7 +411,7 @@ ALTER TABLE `bc_data`
 -- AUTO_INCREMENT for table `gk_test`
 --
 ALTER TABLE `gk_test`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=203;
 
 --
 -- AUTO_INCREMENT for table `q_paper`
@@ -421,7 +423,7 @@ ALTER TABLE `q_paper`
 -- AUTO_INCREMENT for table `t_solution`
 --
 ALTER TABLE `t_solution`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
