@@ -39,12 +39,12 @@
         $result=mysqli_query($conn,$sql);
         if (mysqli_num_rows($result)>0) {
 
-         echo "<div class='container mt-2' >";
+         echo "<div class='container mt-2 ' >";
         
 
           while ($rows=mysqli_fetch_assoc($result)) {
             
-            echo "<div class='border border-1 p-2' style='background-color: white;'>";
+            echo "<div class='border border-1 p-2 rounded-2' style='background-color: white;'>";
             
             echo "<span class='h6 text-uppercase '>{$rows['section']}</span><span class='h6 text-uppercase'>| {$rows['question_no']}</span><span class='h6 text-uppercase'>|Page {$rows['page_no']}</span>";
             echo "<hr />";
@@ -127,7 +127,10 @@
       </div>
   </main>
   <footer>
-    <!-- place footer here -->
+    <!-- place footer here --> 
+  <?php 
+    include('footer.php'); 
+    ?>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

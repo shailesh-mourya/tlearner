@@ -255,7 +255,7 @@
 
     </div>
   </div>
-
+  <!-- footer part -->
   <?php 
     include('footer.php');
     

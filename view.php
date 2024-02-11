@@ -30,7 +30,12 @@
             $result=mysqli_query($conn,$sql);
             $rows=mysqli_fetch_assoc($result);
             echo "<div class='container'>
-                <embed src='paper/{$rows['pdf']}#toolbar=0' type='application/pdf' width='100%'' height='600px'>
+                    <div class='row'>
+                    <div class='col'>
+                    <embed class='col-12' src='paper/{$rows['pdf']}#toolbar=0' type='application/pdf'  height='600px'>
+
+                    </div>
+                    </div>
             </div>";
          
         ?>
@@ -38,10 +43,7 @@
     </main>
     <footer>
         <!-- place footer here -->
-        <?php 
-    include('footer.php');
-    
-    ?>
+  
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
