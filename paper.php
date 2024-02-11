@@ -58,7 +58,7 @@
                     name=''
                     id=''
                     class='btn btn-outline-danger btn-sm m-1  '
-                    href='download.php?id={$rows['id']}'
+                    href='download_paper.php?file={$rows['pdf']}'
                     role='button'
                     ><i class='bi bi-file-earmark-arrow-down'></i></a></td> </tr>";
                 }
