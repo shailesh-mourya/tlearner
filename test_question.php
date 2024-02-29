@@ -33,7 +33,7 @@
                 <span id="timer" class="text-danger text-center"></span>
             </p>
             <script>
-                var timeLeft = 300; // 5 minutes countdown
+                var timeLeft = 10; // 5 minutes countdown
                 function startTimer() {
                     var timerInterval = setInterval(function () {
                         timeLeft--;
@@ -60,7 +60,7 @@
         if (mysqli_num_rows($result)>0) {
 
          echo "<div class='container mt-2'>";
-         echo "<form action='process_test.php' method='post'><ol type='1'>";
+         echo "<form action='process_test.php' method='post' id='testForm'><ol type='1'>";
 
             while ($rows = mysqli_fetch_assoc($result)) {
                 echo "<hr />";

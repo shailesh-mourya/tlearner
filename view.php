@@ -29,11 +29,11 @@
              $sql="SELECT * FROM `q_paper` WHERE `id`='$id';";
             $result=mysqli_query($conn,$sql);
             $rows=mysqli_fetch_assoc($result);
-            echo "<div class='container'>
-            <embed  src='paper/{$rows['pdf']}#toolbar=0' type='application/pdf' width='100%' height='600px'>
+            echo "<div class='container m-xm-0'>
+            <embed class='col-lg-12'  src='paper/{$rows['pdf']}#toolbar=0' type='application/pdf' height='800px'>
             </div>
                    
-                ";
+              ";
 
          
          
