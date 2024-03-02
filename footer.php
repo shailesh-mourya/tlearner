@@ -32,7 +32,7 @@
 <!-- Remove the container if you want to extend the Footer to full width. -->
 
 
-<footer class=" rounded-top text-center text-lg-start text-white mt-5" style="background-color: #3700B3 ;">
+<footer class=" rounded-top text-center text-lg-start text-white mt-5" style="background-color: #3700B3 ;" id="contactus">
   <!-- Grid container -->
   <div class="container p-4">
     <!--Grid row-->

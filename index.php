@@ -21,7 +21,7 @@
       window.location.href = "text_solution.php";
     }
     function testSolution() {
-      window.location.href = "test_question.php"
+      window.location.href = "test_filter.php"
     }
     function gK() {
       window.location.href = "gk_topic.php";
@@ -29,9 +29,10 @@
     function questionSolution() {
       window.location.href = "paper_std.php";
     }
-    function nimokeys() {
-      window.location.href = "filter.php";
-    }
+    // function nimokeys() {
+    //   alert('coming soon...')
+    //   // window.location.href = "filter.php";
+    // }
   </script>
 
 </head>
@@ -143,6 +144,7 @@
     <div class="display-6 text-center">Services</div>
     <div class="row justify-content-center">
 
+      <!-- for basic concept card -->
       <div class="col-lg-3 m-2">
         <div class="card" onclick="basicConcepts()">
           <!-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> -->
@@ -161,6 +163,8 @@
           </div>
         </div>
       </div>
+
+      <!-- for textbooks solution card -->
       <div class="col-lg-3 m-2">
         <div class="card" onclick="textbookSolution()">
           <!-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> -->
@@ -179,6 +183,8 @@
           </div>
         </div>
       </div>
+
+      <!-- for test and solution card -->
       <div class="col-lg-3 m-2">
         <div class="card" onclick="testSolution()">
           <!-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> -->
@@ -197,6 +203,8 @@
           </div>
         </div>
       </div>
+
+      <!-- for g.k card -->
       <div class="col-lg-3 m-2">
         <div class="card" onclick="gK()">
           <!-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> -->
@@ -215,6 +223,8 @@
           </div>
         </div>
       </div>
+
+      <!-- for question paper and solution card -->
       <div class="col-lg-3 m-2">
         <div class="card" onclick="questionSolution()">
           <!-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> -->
@@ -233,8 +243,10 @@
           </div>
         </div>
       </div>
+
+      <!-- for nimokeys card -->
       <div class="col-lg-3 m-2">
-        <div class="card" onclick="nimokeys()">
+        <div class="card " data-bs-toggle="modal" data-bs-target="#nimokeys">
           <!-- <img class="card-img-top" src="holder.js/100x180/" alt="Title"> -->
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
             class=" ps-2 bi bi-journal-text" viewBox="0 0 16 16">
@@ -255,6 +267,23 @@
 
     </div>
   </div>
+
+  <!-- popup Modal for notification in nimokeys -->
+  <div class="modal fade" id="nimokeys" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Notification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          This feature is coming soon..
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- footer part -->
   <?php 
     include('footer.php');

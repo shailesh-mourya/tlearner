@@ -18,15 +18,16 @@
 
 <body>
   <header>
-  
-   <!-- place navbar here -->
-   <?php 
+
+    <!-- place navbar here -->
+    <?php 
         include('header.php');
         
         ?>
   </header>
   <main>
     <!-- question model -->
+
     <div class="m-1 m-lg-3 rounded-2" style="background-color:white">
 
 
@@ -37,7 +38,7 @@
         $sql="SELECT * FROM `gk_test` WHERE `topic_name`='$topic';";
         $result=mysqli_query($conn,$sql);
         $rows=mysqli_fetch_assoc($result);
-        echo "<h1 class='h5 text-center mt-2'>General knowledge on topic {$rows['topic_name']}</h1>";
+        echo "<h1 class='h5 text-center mt-2 p-lg-3'>General knowledge on topic  <span class='bg-info rounded-2 px-1'>{$rows['topic_name']}</span> </h1>";
         
 
         if (mysqli_num_rows($result)>0) {
@@ -131,8 +132,8 @@
   </main>
   <footer>
     <!-- place footer here -->
-   
-  <?php 
+
+    <?php 
     include('footer.php');
     
     ?>

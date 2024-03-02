@@ -12,12 +12,12 @@
             $showWrong = $value;
     
             // Fetch correct answer from the database
-            $sql = "SELECT * FROM gk_test WHERE id = $questionId";
+            $sql = "SELECT * FROM test_data WHERE id = $questionId";
             $result = mysqli_query($conn, $sql);
     
             if ($result) {
                 $row = mysqli_fetch_assoc($result);
-                $correctOption = $row['gk_answer'];
+                $correctOption = $row['test_answer'];
     
                 // Get the letter corresponding to the option
                 $selectedLetter = '✗ : ';
@@ -26,7 +26,7 @@
                 // Check if selected option is correct
                 if ($selectedOption === $correctOption) {
                     //Handle correct answer
-                    $question = $row['gk_question'];
+                    $question = $row['test_question'];
                     echo "<div class='container mt-5'>
                          <div class='container bg-white rounded-2'>
                              <div class='row p-3'>
@@ -43,7 +43,7 @@
                     $userScore++;
                 } elseif ($selectedOption == '') {
                     // Handle unanswered questions
-                    $question = $row['gk_question'];
+                    $question = $row['test_question'];
                     echo "<div class='container mt-5'>
                          <div class='container bg-white rounded-2'>
                              <div class='row p-3'>
@@ -61,7 +61,7 @@
                     $unanswered++;
                 } elseif ($selectedOption !== $correctOption) {
                     // Handle incorrect answer
-                    $question = $row['gk_question'];
+                    $question = $row['test_question'];
                     echo "<div class='container mt-5'>
                         <div class='container bg-white rounded-2'>
                             <div class='row p-3'>

@@ -22,12 +22,12 @@
         <div class="collapse navbar-collapse  " id="collapsibleNavId">
             <ul class="navbar-nav ms-auto mt-2 mt-lg-0 ">
                 <li class="nav-item  ">
-                    <a class="nav-link active" href="#" aria-current="page">Home <span
+                    <a class="nav-link active" href="index.php" aria-current="page">Home <span
                             class="visually-hidden">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">Login</a>
                 </li>
@@ -35,7 +35,7 @@
                     <a class="nav-link" href="#">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#contactus">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
