@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2024 at 08:31 AM
+-- Generation Time: Mar 08, 2024 at 07:53 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -46,6 +46,28 @@ INSERT INTO `bc_data` (`id`, `bc_topic`, `bc_content`) VALUES
 (26, 'nnn', '<p><meta charset=\"utf-8\"></p><p style=\"line-height:1.38;margin-bottom:0pt;margin-top:0pt;\" dir=\"ltr\"><span style=\"background-color:transparent;color:#000000;font-family:Arial,sans-serif;font-size:17pt;\"><span style=\"font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;\"><strong>&nbsp;3.What are the</strong></span></span><span style=\"background-color:transparent;color:#000000;font-family:Arial,sans-serif;font-size:12pt;\"><span style=\"font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;\"><strong>&nbsp;</strong></span></span><span style=\"background-color:transparent;color:#000000;font-family:Roboto,sans-serif;font-size:17pt;\"><span style=\"font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;\"><strong>mode of nutrition?</strong></span></span></p><p style=\"line-height:1.9714285714285713;margin-bottom:15pt;margin-top:8pt;\" dir=\"ltr\"><span style=\"background-color:transparent;color:#000000;font-family:Roboto,sans-serif;font-size:10.5pt;\"><span style=\"font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;\"><strong>&nbsp;</strong></span><span class=\"Apple-tab-span\" style=\"font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;\"><strong> </strong></span><span style=\"font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;\"><strong>The organisms can be classified into two broad categories on the basis of their mode of&nbsp; nutrition as follows:</strong></span></span></p><ol><li style=\"background-color:transparent;color:#000000;font-family:Roboto,sans-serif;font-size:11pt;font-style:normal;font-variant:normal;font-weight:400;list-style-type:decimal;text-decoration:none;vertical-align:baseline;white-space:pre;\" dir=\"ltr\" aria-level=\"1\"><span style=\"background-color:transparent;color:#000000;font-family:Roboto,sans-serif;font-size:11.5pt;\"><span style=\"font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;\"><strong>&nbsp;Autotrophic mode of nutrition:</strong></span></span><span style=\"background-color:#ffffff;color:#333333;font-family:Roboto,sans-serif;font-size:10.5pt;\"><span style=\"font-style:normal;font-variant:normal;font-weight:400;text-decoration:none;vertical-align:baseline;white-space:pre-wrap;\">The organisms which produce food on their own and&nbsp; not depend on other sources/organisms are called autotrophs. This mode of nutrition is known as autotrophic nutrition.</span></span></li></ol><p style=\"line-height:1.7999999999999998;margin-bottom:15pt;margin-left:36pt;margin-top:4pt;padding:3pt 0pt;\" dir=\"ltr\"><img class=\"img-fluid\" src=\"https://lh7-us.googleusercontent.com/YqR-TkHGr1p5qu8gw_8FNCtAKnAOyMz1YWfjYWB_2LMT7WKUZG72l4NRHccAFqTEHFlZcJhKbQHwFYPD_TdQ2dxNFJZiwYVhpL1UOdkO32Wj2qTykJDV12hZMQcdzu4f-MNWZCaYshIpzREwXyUOvIc\"></p>'),
 (27, 'daily english words', '<p>Sure, here are some daily English words along with their Hindi translations:</p><p>1. Hello - नमस्ते (Namaste)<br>2. Goodbye - अलविदा (Alvida)<br>3. Thank you - धन्यवाद (Dhanyavaad)<br>4. Please - कृपया (Kripya)<br>5. Yes - हाँ (Haan)<br>6. No - नहीं (Nahi)<br>7. Food - भोजन (Bhojan)<br>8. Water - पानी (Paani)<br>9. Home - घर (Ghar)<br>10. Love - प्यार (Pyar)<br>11. Time - समय (Samay)<br>12. Day - दिन (Din)<br>13. Night - रात (Raat)<br>14. Happy - खुश (Khush)<br>15. Sad - उदास (Udaas)</p>'),
 (28, 'english story', '<figure class=\"image\"><img class=\"img-fluid\" style=\"aspect-ratio:400/600;\" src=\"https://i.pinimg.com/474x/14/ae/a1/14aea180304157d9bc8afa06be440e0a.jpg\" alt=\"Grasshopet | English Stories For Kids, Moral Stories For ...\" width=\"400\" height=\"600\"></figure>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `books_data`
+--
+
+CREATE TABLE `books_data` (
+  `id` int(20) NOT NULL,
+  `b_standard` varchar(30) NOT NULL,
+  `b_subject` varchar(100) NOT NULL,
+  `b_chapter` text NOT NULL,
+  `b_image` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `books_data`
+--
+
+INSERT INTO `books_data` (`id`, `b_standard`, `b_subject`, `b_chapter`, `b_image`) VALUES
+(1, '8th', 'science', '<li class=\'list-group-item\'><a href=\'#\'>Natural Resources</a></li>\r\n<li class=\'list-group-item\'><a href=\'text_solution.php\'>The Living World</a></li>\r\n<li class=\'list-group-item\'><a href=\'text_solution.php\'>Diversity in Living Things and their Classification</a></li>\r\n<li class=\'list-group-item\'><a href=\'text_solution.php\'>Nutrition and Diet</a></li>\r\n<li class=\'list-group-item\'><a href=\'text_solution.php\'>Sound</a></li>', 'ninth_math1.jpg'),
+(2, '8th', 'History', '<li class=\'list-group-item\'><a href=\'view_books.php\'>The Indian Subcontinent and History</a></li>\r\n<li class=\'list-group-item\'><a href=\'view_books.php\'>Sources of History</a></li>\r\n<li class=\'list-group-item\'><a href=\'view_books.php\'>The Harappan Civilization</a></li>', 'tenth_math2.png');
 
 -- --------------------------------------------------------
 
@@ -342,6 +364,32 @@ INSERT INTO `q_paper` (`id`, `board`, `standard`, `year`, `month`, `subject`, `p
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `test_data`
+--
+
+CREATE TABLE `test_data` (
+  `id` int(11) NOT NULL,
+  `test_topic` varchar(50) NOT NULL,
+  `test_question` text NOT NULL,
+  `test_option1` varchar(100) NOT NULL,
+  `test_option2` varchar(100) NOT NULL,
+  `test_option3` varchar(100) NOT NULL,
+  `test_option4` varchar(100) NOT NULL,
+  `test_answer` varchar(100) NOT NULL,
+  `test_explanation` text NOT NULL,
+  `test_time` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `test_data`
+--
+
+INSERT INTO `test_data` (`id`, `test_topic`, `test_question`, `test_option1`, `test_option2`, `test_option3`, `test_option4`, `test_answer`, `test_explanation`, `test_time`) VALUES
+(1, 'SQL Basics', 'What is a primary key?', 'A', 'B', 'C', 'D', 'A', 'The primary key uniquely identifies each record in a table.', 10000);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `t_solution`
 --
 
@@ -380,6 +428,12 @@ ALTER TABLE `bc_data`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `books_data`
+--
+ALTER TABLE `books_data`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `gk_test`
 --
 ALTER TABLE `gk_test`
@@ -389,6 +443,12 @@ ALTER TABLE `gk_test`
 -- Indexes for table `q_paper`
 --
 ALTER TABLE `q_paper`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `test_data`
+--
+ALTER TABLE `test_data`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -408,6 +468,12 @@ ALTER TABLE `bc_data`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
+-- AUTO_INCREMENT for table `books_data`
+--
+ALTER TABLE `books_data`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `gk_test`
 --
 ALTER TABLE `gk_test`
@@ -418,6 +484,12 @@ ALTER TABLE `gk_test`
 --
 ALTER TABLE `q_paper`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT for table `test_data`
+--
+ALTER TABLE `test_data`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `t_solution`

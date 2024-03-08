@@ -32,11 +32,18 @@
 
 
       <?php 
-        $topic=$_GET["id"];
+        // $topic=$_GET["id"];
         
-        include('config.php');
-        $sql="SELECT * FROM `gk_test` WHERE `topic_name`='$topic';";
-        $result=mysqli_query($conn,$sql);
+         include('config.php');
+        // $sql="SELECT * FROM `gk_test` WHERE `topic_name`='$topic';";
+        // $result=mysqli_query($conn,$sql);
+        // $rows=mysqli_fetch_assoc($result);
+        $topic = mysqli_real_escape_string($conn, $_GET["id"]);
+        $sql = "SELECT * FROM `gk_test` WHERE `topic_name`=?";
+        $stmt = mysqli_prepare($conn, $sql);
+          mysqli_stmt_bind_param($stmt, "s", $topic);
+          mysqli_stmt_execute($stmt);
+          $result = mysqli_stmt_get_result($stmt);
         $rows=mysqli_fetch_assoc($result);
         echo "<h1 class='h5 text-center mt-2 p-lg-3'>General knowledge on topic  <span class='bg-info rounded-2 px-1'>{$rows['topic_name']}</span> </h1>";
         
@@ -89,7 +96,7 @@
         
         
         
-        ?>
+      ?>
     </div>
 
 

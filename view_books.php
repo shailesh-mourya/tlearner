@@ -29,96 +29,64 @@
     <div class="m-1">
         <div class="container rounded-2 " style="background-color: white;">
 
-            <!-- for one subject (loop from db) -->
-            <div class="row m-lg-1 pt-3">
+            <?php 
+        
+        //$std=$_GET["id"];
+         $std='8th';
+        
+        include('config.php');
+        $sql="SELECT * FROM `books_data` WHERE `b_standard`='$std';";
+        $result=mysqli_query($conn,$sql);
+       // $rows=mysqli_fetch_assoc($result);
+       // echo "{$rows['b_chapter']}";
 
-                <div class="col-md-6">
+        while ($rows=mysqli_fetch_assoc($result)) {
+           
+            echo "<div class='row m-lg-1 pt-3'>
 
-                    <div class="card p-lg-2">
-                        <img class="img p-lg-2" src="./books_images/ninth_math1.jpg" height="350px" alt="Title" />
-                    </div>
+            <div class='col-md-6'>
+        
+                <div class='card p-lg-2'>
+                    <img class='img p-lg-2' src='./books_images/{$rows['b_image']}' height='350px' alt='Title' />
                 </div>
-                <div class="col-md-6">
-
-                    <div class="card " style="border: 0px;">
-                        <div class="card-body p-lg-2 ">
-                            <h4 class="card-title">Mathematics part1</h4>
-                            <div class="overflow-auto" style="max-height: 200px;">
-                                <ul class="list-group list-group-numbered">
-
-                                    <!-- list of chapter (loop) -->
-                                    <li class="list-group-item"><a href="#">Active item operation is good for hall
-                                            what</a>
-                                    </li>
-                                    <li class="list-group-item"><a href="#">Item</a></li>
-                                    <li class="list-group-item"><a href="#">Disabled item</a></li>
-                                    <li class="list-group-item"><a href="#">Active item operation is good for hall
-                                            what</a>
-                                    </li>
-                                    <li class="list-group-item"><a href="#">Item</a></li>
-                                    <li class="list-group-item"><a href="#">Disabled item</a></li>
-                                    <li class="list-group-item"><a href="#">Active item operation is good for hall
-                                            what</a>
-                                    </li>
-                                    <li class="list-group-item"><a href="#">Item</a></li>
-                                    <li class="list-group-item"><a href="#">Disabled item</a></li>
-                                </ul>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
-            <hr>
-
-            <!-- for second subject (loop from db) -->
-            <div class="row m-lg-1">
-
-                <div class="col-md-6 mt-2">
-
-                    <div class="card p-lg-2">
-                        <img class="img p-lg-2" src="./books_images/ninth_math2.jpg" height="350px" alt="Title" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-
-                    <div class="card " style="border: 0px;">
-                        <div class="card-body p-lg-2 ">
-                            <h4 class="card-title">Mathematics part2</h4>
-                            <div class="overflow-auto" style="max-height: 200px;">
-                                <ul class="list-group list-group-numbered">
-                                    <li class="list-group-item"><a href="#">Active item operation is good for hall
-                                            what</a>
-                                    </li>
-                                    <li class="list-group-item"><a href="#">Item</a></li>
-                                    <li class="list-group-item"><a href="#">Disabled item</a></li>
-                                    <li class="list-group-item"><a href="#">Active item operation is good for hall
-                                            what</a>
-                                    </li>
-                                    <li class="list-group-item"><a href="#">Item</a></li>
-                                    <li class="list-group-item"><a href="#">Disabled item</a></li>
-                                    <li class="list-group-item"><a href="#">Active item operation is good for hall
-                                            what</a>
-                                    </li>
-                                    <li class="list-group-item"><a href="#">Item</a></li>
-                                    <li class="list-group-item"><a href="#">Disabled item</a></li>
-                                </ul>
-                            </div>
-
-
+            <div class='col-md-6'>
+        
+                <div class='card ' style='border: 0px;'>
+                    <div class='card-body p-lg-2 '>
+                        <h4 class='card-title'>{$rows['b_subject']}</h4>
+                        <div class='overflow-auto' style='max-height: 200px;'>
+                            <ul class='list-group list-group-numbered'>
+        
+                                <!-- list of chapter (loop) -->
+                                {$rows['b_chapter']}
+        
+                            </ul>
                         </div>
+        
+        
                     </div>
                 </div>
-
-
             </div>
-            <hr>
+        
+        
+        </div>
+        <hr> 
+            ";
+        }
+        
+        
+        
+        
+        
+        ?>
+
+            
+
+            
 
             <!-- for third subject (loop from db) -->
-            <div class="row m-lg-1">
+            <!-- <div class="row m-lg-1">
 
                 <div class="col-md-6 mt-2">
 
@@ -158,7 +126,7 @@
 
 
             </div>
-            <hr>
+            <hr> -->
 
         </div>
     </div>
@@ -187,3 +155,4 @@
 </body>
 
 </html>
+

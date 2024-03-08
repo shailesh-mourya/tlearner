@@ -18,7 +18,7 @@
       window.location.href = "basic_topic.php";
     }
     function textbookSolution() {
-      window.location.href = "text_solution.php";
+      window.location.href = "filter.php";
     }
     function testSolution() {
       window.location.href = "test_filter.php"
