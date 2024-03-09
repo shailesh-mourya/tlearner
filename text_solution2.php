@@ -29,12 +29,12 @@
 
                 <?php 
     include('config.php');
-    $id=$_GET["id"];
-    $sql="SELECT * FROM `bc_data` WHERE `id`='$id';";
+   // $id=$_GET["id"];
+    $sql="SELECT * FROM `text_solution2` WHERE `b_standard`='6th' and `b_chapter`='Natural Resources';";
     $result=mysqli_query($conn,$sql);
     $rows=mysqli_fetch_assoc($result);
-    echo " <div class='col'>  <h3>{$rows['bc_topic']}</h3>";
-    echo "{$rows['bc_content']}</div>";
+    echo " <div class='col'>  <h3>Chapter Name:{$rows['b_chapter']}</h3>";
+    echo "{$rows['b_solution']}</div>";
     
     ?>
 
