@@ -33,30 +33,46 @@
             margin: 20px auto;
         }
     </style>
-        <?php 
-        include('config.php');
+       
+<?php
+include('config.php');
 
+if (isset($_POST["submit"])) {
+    $std = $_POST["std"];
+    $subject = $_POST["subject"];
+    $chapter = $_POST["chapter"];
+    $content = $_POST["editor"];
 
-        
-        if (isset($_POST["submit"])) {
-            $std=$_POST["std"];
-            $subject=$_POST["subject"];
-            $chapter=$_POST["chapter"];
-            $content=$_POST["editor"];
-            //$output = replaceDoubleQuotes($content);
-            $sql="INSERT INTO `text_solution2`(`b_standard`, `b_subject`, `b_chapter`, `b_solution`) VALUES ('$std','$subject','$chapter','$content');";
-            
-            if (mysqli_query($conn,$sql)) {
-                header('location:tsolution_upload2.php');
-                die();
-            }
-            else{
-                echo "Please try again";
-            }
+    // Use prepared statement to avoid SQL injection
+    $sql = "INSERT INTO `text_solution2`(`b_standard`, `b_subject`, `b_chapter`, `b_solution`) VALUES (?, ?, ?, ?)";
+
+    // Prepare the SQL statement
+    $stmt = mysqli_prepare($conn, $sql);
+
+    if ($stmt) {
+        // Bind parameters to the prepared statement
+        mysqli_stmt_bind_param($stmt, "ssss", $std, $subject, $chapter, $content);
+
+        // Execute the prepared statement
+        if (mysqli_stmt_execute($stmt)) {
+            header('location:tsolution_upload2.php');
+            die();
+        } else {
+            echo "Error executing the statement: " . mysqli_stmt_error($stmt);
         }
+
+        // Close the statement
+        mysqli_stmt_close($stmt);
+    } else {
+        echo "Error preparing the statement: " . mysqli_error($conn);
+    }
+
+    // Close the connection
+    mysqli_close($conn);
+}
+?>
+
         
-        
-        ?>
 
     <div id="container">
         <div class="row my-5">

@@ -34,45 +34,64 @@
         }
     </style>
         <?php 
-        include('config.php');
-        // function replaceDoubleQuotes($inputString) {
-        //     $outputString = str_replace('"', "'", $inputString);
-        //     return $outputString;
-        // }
-
-        // Assuming $conn is your mysqli connection
-// if (isset($_POST["submit"])) {
-//     $topic = mysqli_real_escape_string($conn, $_POST["topic"]);
-//     $content = mysqli_real_escape_string($conn, $_POST["editor"]);
-
-//     $sql = "INSERT INTO `bc_data` (`bc_topic`, `bc_content`) VALUES ('$topic', '$content')";
-
-//     if (mysqli_query($conn, $sql)) {
-//         header('location:concept_upload.php');
-//         exit();
-//     } else {
-//         echo "Please try again";
-//     }
-// }
-
+        // include('config.php');
+       
         
-        if (isset($_POST["submit"])) {
-            $topic=$_POST["topic"];
-            $content=$_POST["editor"];
-            //$output = replaceDoubleQuotes($content);
-            $sql="INSERT INTO `bc_data`(`bc_topic`, `bc_content`) VALUES ('$topic','$content');";
+        // if (isset($_POST["submit"])) {
+        //     $topic=$_POST["topic"];
+        //     $content=$_POST["editor"];
+        //     //$output = replaceDoubleQuotes($content);
+        //     $sql="INSERT INTO `bc_data`(`bc_topic`, `bc_content`) VALUES ('$topic','$content');";
             
-            if (mysqli_query($conn,$sql)) {
-                header('location:concept_upload.php');
-                die();
-            }
-            else{
-                echo "Please try again";
-            }
-        }
+        //     if (mysqli_query($conn,$sql)) {
+        //         header('location:concept_upload.php');
+        //         die();
+        //     }
+        //     else{
+        //         echo "Please try again";
+        //     }
+        // }
         
         
         ?>
+
+        <!-- prepared statement to prevent above insecure insert data -->
+        <?php
+include('config.php');
+
+if (isset($_POST["submit"])) {
+    $topic = $_POST["topic"];
+    $content = $_POST["editor"];
+
+    // Use prepared statement to avoid SQL injection
+    $sql = "INSERT INTO `bc_data`(`bc_topic`, `bc_content`) VALUES (?, ?)";
+
+    // Prepare the SQL statement
+    $stmt = mysqli_prepare($conn, $sql);
+
+    if ($stmt) {
+        // Bind parameters to the prepared statement
+        mysqli_stmt_bind_param($stmt, "ss", $topic, $content);
+
+        // Execute the prepared statement
+        if (mysqli_stmt_execute($stmt)) {
+            header('location:concept_upload.php');
+            die();
+        } else {
+            echo "Error executing the statement: " . mysqli_stmt_error($stmt);
+        }
+
+        // Close the statement
+        mysqli_stmt_close($stmt);
+    } else {
+        echo "Error preparing the statement: " . mysqli_error($conn);
+    }
+
+    // Close the connection
+    mysqli_close($conn);
+}
+?>
+
 
     <div id="container">
         <div class="row my-5">

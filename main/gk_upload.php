@@ -1,31 +1,77 @@
 
 <?php 
- include('config.php');
+//  include('config.php');
     
-if (isset($_POST["submit"])) {
-    $topic=$_POST["topic_name"];
-    $question=$_POST["question"];
-    $option1=$_POST["option1"];
-    $option2=$_POST["option2"];
-    $option3=$_POST["option3"];
-    $option4=$_POST["option4"];
-    $answer=$_POST["answer"];
-    $explanation=$_POST["explanation"];
+// if (isset($_POST["submit"])) {
+//     $topic=$_POST["topic_name"];
+//     $question=$_POST["question"];
+//     $option1=$_POST["option1"];
+//     $option2=$_POST["option2"];
+//     $option3=$_POST["option3"];
+//     $option4=$_POST["option4"];
+//     $answer=$_POST["answer"];
+//     $explanation=$_POST["explanation"];
   
-    $sql="INSERT INTO `gk_test`(`topic_name`, `gk_question`, `gk_option1`, `gk_option2`, `gk_option3`, `gk_option4`, `gk_answer`, `gk_explanation`) VALUES ('$topic','$question','$option1','$option2','$option3','$option4','$answer','$explanation');";
+//     $sql="INSERT INTO `gk_test`(`topic_name`, `gk_question`, `gk_option1`, `gk_option2`, `gk_option3`, `gk_option4`, `gk_answer`, `gk_explanation`) VALUES ('$topic','$question','$option1','$option2','$option3','$option4','$answer','$explanation');";
     
-    if (mysqli_query($conn,$sql)) {
-        header('location:gk_upload.php');
-        echo "<script> alert('insert'); </script>";
+//     if (mysqli_query($conn,$sql)) {
+//         header('location:gk_upload.php');
+//         echo "<script> alert('insert'); </script>";
      
-    }
-    else{
-        echo "Please try again";
-    }
-}
+//     }
+//     else{
+//         echo "Please try again";
+//     }
+// }
 
 
 ?>
+
+<!-- prepared statement to prevent above insecure insert -->
+<?php
+include('config.php');
+
+if (isset($_POST["submit"])) {
+    $topic = $_POST["topic_name"];
+    $question = $_POST["question"];
+    $option1 = $_POST["option1"];
+    $option2 = $_POST["option2"];
+    $option3 = $_POST["option3"];
+    $option4 = $_POST["option4"];
+    $answer = $_POST["answer"];
+    $explanation = $_POST["explanation"];
+
+    // Use prepared statement to avoid SQL injection
+    $sql = "INSERT INTO `gk_test`(`topic_name`, `gk_question`, `gk_option1`, `gk_option2`, `gk_option3`, `gk_option4`, `gk_answer`, `gk_explanation`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+    // Prepare the SQL statement
+    $stmt = mysqli_prepare($conn, $sql);
+
+    if ($stmt) {
+        // Bind parameters to the prepared statement
+        mysqli_stmt_bind_param($stmt, "ssssssss", $topic, $question, $option1, $option2, $option3, $option4, $answer, $explanation);
+
+        // Execute the prepared statement
+        if (mysqli_stmt_execute($stmt)) {
+            header('location:gk_upload.php');
+            echo "<script> alert('insert'); </script>";
+            die();
+        } else {
+            echo "Error executing the statement: " . mysqli_stmt_error($stmt);
+        }
+
+        // Close the statement
+        mysqli_stmt_close($stmt);
+    } else {
+        echo "Error preparing the statement: " . mysqli_error($conn);
+    }
+
+    // Close the connection
+    mysqli_close($conn);
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 

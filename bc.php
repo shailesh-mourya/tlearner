@@ -28,15 +28,44 @@
 
 
                 <?php 
-    include('config.php');
-    $id=$_GET["id"];
-    $sql="SELECT * FROM `bc_data` WHERE `id`='$id';";
-    $result=mysqli_query($conn,$sql);
-    $rows=mysqli_fetch_assoc($result);
-    echo " <div class='col'>  <h3>{$rows['bc_topic']}</h3>";
-    echo "{$rows['bc_content']}</div>";
+    // include('config.php');
+    // $id=$_GET["id"];
+    // $sql="SELECT * FROM `bc_data` WHERE `id`='$id';";
+    // $result=mysqli_query($conn,$sql);
+    // $rows=mysqli_fetch_assoc($result);
+    // echo " <div class='col'>  <h3>{$rows['bc_topic']}</h3>";
+    // echo "{$rows['bc_content']}</div>";
     
     ?>
+    <!-- to prevent above insecure get data -->
+    <?php 
+    
+    include('config.php');
+        $id = $_GET["id"];
+        $sql = "SELECT * FROM `bc_data` WHERE `id`=?";
+        $stmt = mysqli_prepare($conn, $sql);
+
+if ($stmt) {
+    mysqli_stmt_bind_param($stmt, "s", $id);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $rows = mysqli_fetch_assoc($result);
+
+    if ($rows) {
+        echo "<div class='col'>  <h3>{$rows['bc_topic']}</h3>";
+        echo "{$rows['bc_content']}</div>";
+    } else {
+        echo "Record not found.";
+    }
+
+    mysqli_stmt_close($stmt);
+} else {
+    echo "Error preparing the statement: " . mysqli_error($conn);
+}  
+    
+    ?>
+
+
 
             </div>
         </div>

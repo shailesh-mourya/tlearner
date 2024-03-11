@@ -23,12 +23,20 @@
     </header>
     <main>
         <?php 
-            $id=$_GET["id"];
+            
+            $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+        if ($id === false || $id === null) {
+             echo "Invalid ID parameter.";
+                // Handle the error or redirect as needed.
+             exit;
+        }
+
             include('config.php');
             // $sql="SELECT * FROM `q_paper` WHERE `standard`='10th std maharashtra board' AND `id`='$id';";
              $sql="SELECT * FROM `q_paper` WHERE `id`='$id';";
             $result=mysqli_query($conn,$sql);
             $rows=mysqli_fetch_assoc($result);
+            
             echo "<div class='container m-xm-0'>
             <embed class='col-lg-12'  src='paper/{$rows['pdf']}#toolbar=0' type='application/pdf' height='800px'>
             </div>

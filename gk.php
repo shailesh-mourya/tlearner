@@ -32,12 +32,9 @@
 
 
       <?php 
-        // $topic=$_GET["id"];
         
          include('config.php');
-        // $sql="SELECT * FROM `gk_test` WHERE `topic_name`='$topic';";
-        // $result=mysqli_query($conn,$sql);
-        // $rows=mysqli_fetch_assoc($result);
+       
         $topic = mysqli_real_escape_string($conn, $_GET["id"]);
         $sql = "SELECT * FROM `gk_test` WHERE `topic_name`=?";
         $stmt = mysqli_prepare($conn, $sql);

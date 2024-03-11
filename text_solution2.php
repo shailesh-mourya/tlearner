@@ -30,7 +30,7 @@
                 <?php 
     include('config.php');
    // $id=$_GET["id"];
-    $sql="SELECT * FROM `text_solution2` WHERE `b_standard`='6th' and `b_chapter`='Natural Resources';";
+    $sql="SELECT * FROM `text_solution2` WHERE `b_standard`='6th' and `b_chapter`='Natural Resources2';";
     $result=mysqli_query($conn,$sql);
     $rows=mysqli_fetch_assoc($result);
     echo " <div class='col'>  <h3>Chapter Name:{$rows['b_chapter']}</h3>";

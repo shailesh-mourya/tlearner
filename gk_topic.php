@@ -41,18 +41,30 @@ $result=mysqli_query($conn,$sql);
 
 while ($rows=mysqli_fetch_assoc($result)) {
 
-        echo "
+    //     echo "
         
-                  <a
-                name=''
-                id=''
-                class='container-fluid col-xs-2 col-sm-2 col-lg-3 mt-2 m-lg-2 btn btn-primary text-center'
-                href='gk.php?id={$rows['topic_name']}'
-                role='button'
-                >{$rows['topic_name']}</a
-            >
+    //               <a
+    //             name=''
+    //             id=''
+    //             class='container-fluid col-xs-2 col-sm-2 col-lg-3 mt-2 m-lg-2 btn btn-primary text-center'
+    //             href='gk.php?id={$rows['topic_name']}'
+    //             role='button'
+    //             >{$rows['topic_name']}</a
+    //         >
        
-    ";
+    // ";
+
+    //the prevent above injection
+    echo "
+    <a
+        name=''
+        id=''
+        class='container-fluid col-xs-2 col-sm-2 col-lg-3 mt-2 m-lg-2 btn btn-primary text-center'
+        href='gk.php?id=" . htmlspecialchars($rows['topic_name'], ENT_QUOTES) . "'
+        role='button'
+    >" . htmlspecialchars($rows['topic_name'], ENT_QUOTES) . "</a>
+";
+
 }
 
 

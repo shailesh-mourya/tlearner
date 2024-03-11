@@ -34,51 +34,31 @@
         }
     </style>
     <?php 
-        include('config.php');
-        // function replaceDoubleQuotes($inputString) {
-        //     $outputString = str_replace('"', "'", $inputString);
-        //     return $outputString;
-        // }
+    include('config.php');
 
-        // Assuming $conn is your mysqli connection
-// if (isset($_POST["submit"])) {
-//     $topic = mysqli_real_escape_string($conn, $_POST["topic"]);
-//     $content = mysqli_real_escape_string($conn, $_POST["editor"]);
+    if (isset($_POST["submit"])) {
+        $std = $_POST["std"];
+        $subject = $_POST["subject"];
+        $chapter = $_POST["chapter"];
+        $section = $_POST["section"];
+        $question_no = $_POST["qn"];
+        $question = $_POST["editor1"];
+        $answer = $_POST["editor2"];
+        $page_no = $_POST["pn"];
 
-//     $sql = "INSERT INTO `bc_data` (`bc_topic`, `bc_content`) VALUES ('$topic', '$content')";
+        $sql = "INSERT INTO `t_solution` (`std`, `subject`, `chapter`, `section`, `question_no`, `question`, `answer`, `page_no`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = mysqli_prepare($conn, $sql);
 
-//     if (mysqli_query($conn, $sql)) {
-//         header('location:concept_upload.php');
-//         exit();
-//     } else {
-//         echo "Please try again";
-//     }
-// }
-
-        
-        if (isset($_POST["submit"])) {
-            $std=$_POST["std"];
-            $subject=$_POST["subject"];
-            $chapter=$_POST["chapter"];
-            $section=$_POST["section"];
-            $question_no=$_POST["qn"];
-            $question=$_POST["editor1"];
-            $answer=$_POST["editor2"];
-            $page_no=$_POST["pn"];
-            //$output = replaceDoubleQuotes($content);
-            $sql="INSERT INTO `t_solution`( `std`, `subject`, `chapter`, `section`, `question_no`, `question`, `answer`, `page_no`) VALUES ('$std','$subject','$chapter','$section','$question_no','$question','$answer','$page_no');";
-            
-            if (mysqli_query($conn,$sql)) {
-                header('location:tsolution_upload.php');
-                die();
-            }
-            else{
-                echo "Please try again";
-            }
+        if ($stmt) {
+            mysqli_stmt_bind_param($stmt, "ssssssss", $std, $subject, $chapter, $section, $question_no, $question, $answer, $page_no);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_close($stmt);
+        } else {
+            echo "Error preparing the statement: " . mysqli_error($conn);
         }
-        
-        
-        ?>
+    }
+?>
+
 
     <div class="container border border-2" id="container">
         <form action="" method="post">

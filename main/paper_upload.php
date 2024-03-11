@@ -1,48 +1,88 @@
 <?php 
- include('config.php');
+//  include('config.php');
     
-if (isset($_POST["submit"])) {
-    $board=$_POST["board"];
-    $standard=$_POST["standard"];
-    $year=$_POST["year"];
-    $month=$_POST["month"];
-    $subject=$_POST["subject"];
-   $file = $_FILES['file']['name'];
-    $description=$board ." ".$standard." ".$subject." Question Paper ".$year;
+// if (isset($_POST["submit"])) {
+//     $board=$_POST["board"];
+//     $standard=$_POST["standard"];
+//     $year=$_POST["year"];
+//     $month=$_POST["month"];
+//     $subject=$_POST["subject"];
+//    $file = $_FILES['file']['name'];
+//     $description=$board ." ".$standard." ".$subject." Question Paper ".$year;
+
+// $target_dir = "../paper/";
+
+// $file_extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION); // Get the file extension
+// $new_file_name = $year.$month.$subject. "." . $file_extension; // Generate a new unique name
+
+// $target_name = $target_dir . $new_file_name;
+// move_uploaded_file($_FILES['file']['tmp_name'], $target_name);
+
+// $sql="INSERT INTO `q_paper`(`board`, `standard`, `year`, `month`, `subject`, `pdf`, `description`) VALUES ('$board','$standard','$year','$month','$subject','$new_file_name','$description');";
 
 
-$target_dir = "../paper/";
-// $target_name = $target_dir . basename($_FILES['file']['name']);
-// move_uploaded_file($_FILES['file']['tmp_name'],$target_name);
-
-$file_extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION); // Get the file extension
-$new_file_name = $year.$month.$subject. "." . $file_extension; // Generate a new unique name
-
-$target_name = $target_dir . $new_file_name;
-move_uploaded_file($_FILES['file']['tmp_name'], $target_name);
-
-
-
-
-
-$sql="INSERT INTO `q_paper`(`board`, `standard`, `year`, `month`, `subject`, `pdf`, `description`) VALUES ('$board','$standard','$year','$month','$subject','$new_file_name','$description');";
-
-
-if (mysqli_query($conn,$sql)) {
-
-    
-
+// if (mysqli_query($conn,$sql)) {
   
-} else {
-   echo "Something went wrong". mysqli_error($conn);
-}
-mysqli_close($conn);
+// } else {
+//    echo "Something went wrong". mysqli_error($conn);
+// }
+// mysqli_close($conn);
 
 
-}
+// }
 
 
 ?>
+
+<?php
+include('config.php');
+
+if (isset($_POST["submit"])) {
+    $board = mysqli_real_escape_string($conn, $_POST["board"]);
+    $standard = mysqli_real_escape_string($conn, $_POST["standard"]);
+    $year = mysqli_real_escape_string($conn, $_POST["year"]);
+    $month = mysqli_real_escape_string($conn, $_POST["month"]);
+    $subject = mysqli_real_escape_string($conn, $_POST["subject"]);
+    $file = $_FILES['file']['name'];
+    $description = $board . " " . $standard . " " . $subject . " Question Paper " . $year;
+
+    $target_dir = "../paper/";
+    $file_extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+    $new_file_name = $year . $month . $subject . "." . $file_extension;
+    $target_name = $target_dir . $new_file_name;
+
+    // Move the uploaded file to the target directory
+    move_uploaded_file($_FILES['file']['tmp_name'], $target_name);
+
+    // Use prepared statement to avoid SQL injection
+    $sql = "INSERT INTO `q_paper`(`board`, `standard`, `year`, `month`, `subject`, `pdf`, `description`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    // Prepare the SQL statement
+    $stmt = mysqli_prepare($conn, $sql);
+
+    if ($stmt) {
+        // Bind parameters to the prepared statement
+        mysqli_stmt_bind_param($stmt, "sssssss", $board, $standard, $year, $month, $subject, $new_file_name, $description);
+
+        // Execute the prepared statement
+        if (mysqli_stmt_execute($stmt)) {
+            // Success
+        } else {
+            echo "Something went wrong: " . mysqli_stmt_error($stmt);
+        }
+
+        // Close the statement
+        mysqli_stmt_close($stmt);
+    } else {
+        echo "Error preparing the statement: " . mysqli_error($conn);
+    }
+
+    // Close the connection
+    mysqli_close($conn);
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 
