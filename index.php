@@ -105,7 +105,7 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide h-75" data-bs-ride="carousel">
           <div class="carousel-inner h-7">
             <div class="carousel-item h-75 active">
-              <img src="image/1.jpg" class="d-block w-100 h-75 " alt="...">
+              <img src="image/banner.png" class="d-block w-100 h-75 " alt="...">
 
             </div>
             <div class="carousel-item h-75">
