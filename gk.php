@@ -36,7 +36,7 @@
          include('config.php');
        
         $topic = mysqli_real_escape_string($conn, $_GET["id"]);
-        $sql = "SELECT * FROM `gk_test` WHERE `topic_name`=?";
+        $sql = "SELECT * FROM `gk_data` WHERE `topic_name`=?";
         $stmt = mysqli_prepare($conn, $sql);
           mysqli_stmt_bind_param($stmt, "s", $topic);
           mysqli_stmt_execute($stmt);

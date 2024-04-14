@@ -36,7 +36,7 @@
                 
         <?php 
 include('config.php');
-$sql="SELECT DISTINCT `topic_name` FROM `gk_test`;";
+$sql="SELECT DISTINCT `topic_name` FROM `gk_data`;";
 $result=mysqli_query($conn,$sql);
 
 while ($rows=mysqli_fetch_assoc($result)) {

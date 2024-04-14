@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="dashboardstyle.css">
+
 
 
 </head>
@@ -21,226 +23,241 @@
     </header>
 
 
+    <div class="container p-0 m-0">
+        <div class="row p-0 m-0">
+            <div class="col-lg-3 p-0 m-0">
+                <!-- sidebar -->
+                <div class="flex-shrink-0 p-3"
+                    style="width: 280px;height: 100vh; background-color: #3600b36d;color:white;">
+                    <a href="/"
+                        class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+                        <span class="fs-5 fw-semibold">Dashboard</span>
+                    </a>
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                            <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse1" aria-expanded="true">
+                                Basic Concept
+                                <i class="bi bi-chevron-compact-right"></i>
+                            </button>
+                            <div class="collapse show" id="home-collapse1">
+                                <ul class="list-unstyled fw-normal pb-1 small ps-5">
+                                    <li><a href="bc_upload.php"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New
+                                            Upload !</a></li>
+                                    <li><a href="bc_operation.php"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
+                                    </li>
 
-    <!-- slidebar -->
-    <!-- <div class="flex-shrink-0 p-3" style="width: 280px;height: 100vh; background-color: antiquewhite;">
-        <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse2" aria-expanded="false">
+                                Textbook Solution
+                                <i class="bi bi-chevron-compact-right"></i>
+                            </button>
+                            <div class="collapse" id="home-collapse2">
+                                <ul class="list-unstyled fw-normal pb-1 small ps-5">
+                                    <li><a href="tsolution_upload2.php"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New
+                                            Upload !</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a>
+                                    </li>
 
-            <span class="fs-5 fw-semibold">Collapsible</span>
-        </a>
-        <ul class="list-unstyled ps-0">
-            <li class="mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                    Home
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
-                <div class="collapse show" id="home-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse3" aria-expanded="false">
+                                Test & solution
+                                <i class="bi bi-chevron-compact-right"></i>
+                            </button>
+                            <div class="collapse" id="home-collapse3">
+                                <ul class="list-unstyled fw-normal pb-1 small ps-5">
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New
+                                            Test
+                                            !</a>
+                                    </li>
+                                    <li><a href="test_operation.php"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse4" aria-expanded="false">
+                                G.K
+                                <i class="bi bi-chevron-compact-right"></i>
+                            </button>
+                            <div class="collapse" id="home-collapse4">
+                                <ul class="list-unstyled fw-normal pb-1 small ps-5">
+                                    <li><a href="gk_upload.php"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New
+                                            G.K !</a>
+                                    </li>
+                                    <li><a href="gk_operation.php"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse5" aria-expanded="false">
+                                Question paper & Solution
+                                <i class="bi bi-chevron-compact-right"></i>
+                            </button>
+                            <div class="collapse" id="home-collapse5">
+                                <ul class="list-unstyled fw-normal pb-1 small ps-5">
+                                    <li><a href="paper_upload.php"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New
+                                            papers !</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mb-1">
+                            <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse6" aria-expanded="false">
+                                Nimokeys
+                                <i class="bi bi-chevron-compact-right"></i>
+                            </button>
+                            <div class="collapse" id="home-collapse6">
+                                <ul class="list-unstyled fw-normal pb-1 small ps-5">
+                                    <li><a href="paper_upload.php"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New
+                                            Nimokeys !</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="border-top my-3"></li>
+                        <li class="mb-1">
+                            <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                                Account
+                                <i class="bi bi-chevron-compact-right"></i>
+                            </button>
+                            <div class="collapse" id="account-collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small ps-5">
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a>
+                                    </li>
+                                    <li><a href="#"
+                                            class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign
+                                            out</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                    Dashboard
-                    <i class="bi bi-chevron-compact-right"></i>
+                <!-- sidebar -->
+            </div>
+            <div class="col-lg-9">
+                <!-- data other then sidebar -->
+                <div class="container">
+                    <div class="row">
+                        <!-- single counter start-->
+                        <div class="col-md-2 col-sm-6 m-3">
+                            <div class="counter">
+                                <div class="counter-content">
+                                    <div class="counter-icon">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <h3>Users</h3>
+                                    <span class="counter-value">337</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single counter end-->
+                        <!-- single counter start-->
+                        <div class="col-md-2 col-sm-6 m-3">
+                            <div class="counter orange">
+                                <div class="counter-content">
+                                    <div class="counter-icon">
+                                        <i class="bi bi-chat-dots-fill"></i>
+                                    </div>
+                                    <h3>Comments</h3>
+                                    <span class="counter-value">318</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single counter end-->
+                        <!-- single counter start-->
+                        <div class="col-md-2 col-sm-6 m-3">
+                            <div class="counter">
+                                <div class="counter-content">
+                                    <div class="counter-icon">
+                                        <i class="bi bi-people-fill"></i>
+                                    </div>
+                                    <h3>Users</h3>
+                                    <span class="counter-value">337</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single counter end-->
+                        <!-- single counter start-->
+                        <div class="col-md-2 col-sm-6 m-3 ">
+                            <div class="counter orange">
+                                <div class="counter-content">
+                                    <div class="counter-icon">
+                                        <i class="bi bi-chat-dots-fill"></i>
+                                    </div>
+                                    <h3>Comments</h3>
+                                    <span class="counter-value">318</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single counter end-->
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-lg-12">
+                            <div class="container">
+                                <form class="w-100 me-3" role="search">
+                                    <div class="d-flex">
+                                        <input type="search" class="form-control" placeholder="Search..."
+                                            aria-label="Search" aria-describedby="button-addon2">
+                                        <button type="submit" class=" pt-1 px-2  rounded-end-3 btn btn-success"
+                                            id="button-addon2"><i class="bi bi-search"></i></button>
 
-                </button>
-                <div class="collapse" id="dashboard-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a>
-                        </li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</a></li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                    Orders
-                    <i class="bi bi-chevron-compact-right"></i>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
 
-                </button>
-                <div class="collapse" id="orders-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New</a>
-                        </li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</a></li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</a></li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="border-top my-3"></li>
-            <li class="mb-1">
-                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                    Account
-                    <i class="bi bi-chevron-compact-right"></i>
+                    </div>
 
-                </button>
-                <div class="collapse" id="account-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a>
-                        </li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign
-                                out</a></li>
-                    </ul>
                 </div>
-            </li>
-        </ul>
-    </div> -->
-
-    <div class="flex-shrink-0 p-3" style="width: 280px;height: 100vh; background-color: antiquewhite;">
-        <a href="/" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-            <span class="fs-5 fw-semibold">Dashboard</span>
-        </a>
-        <ul class="list-unstyled ps-0">
-            <li class="mb-1">
-                <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#home-collapse1" aria-expanded="true">
-                    Basic Concept
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
-                <div class="collapse show" id="home-collapse1">
-                    <ul class="list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="concept_upload.php"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">New
-                                Upload !</a></li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
-
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#home-collapse2" aria-expanded="false">
-                    Textbook Solution
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
-                <div class="collapse" id="home-collapse2">
-                    <ul class="list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="tsolution_upload2.php"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Upload !</a>
-                        </li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#home-collapse3" aria-expanded="false">
-                    Test & solution
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
-                <div class="collapse" id="home-collapse3">
-                    <ul class="list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Test
-                                !</a>
-                        </li>
-                        <li><a href="test_operation.php"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#home-collapse4" aria-expanded="false">
-                    G.K
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
-                <div class="collapse" id="home-collapse4">
-                    <ul class="list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="gk_upload.php"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">New G.K !</a>
-                        </li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#home-collapse5" aria-expanded="false">
-                    Question paper & Solution
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
-                <div class="collapse" id="home-collapse5">
-                    <ul class="list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="paper_upload.php"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">New papers !</a>
-                        </li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </li>
-            <li class="mb-1">
-                <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#home-collapse6" aria-expanded="false">
-                    Nimokeys
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
-                <div class="collapse" id="home-collapse6">
-                    <ul class="list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="paper_upload.php"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Nimokeys !</a>
-                        </li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </li>
-            <li class="border-top my-3"></li>
-            <li class="mb-1">
-                <button class="btn d-inline-flex align-items-center rounded border-0 collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-                    Account
-                    <i class="bi bi-chevron-compact-right"></i>
-                </button>
-                <div class="collapse" id="account-collapse">
-                    <ul class="list-unstyled fw-normal pb-1 small ps-5">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a>
-                        </li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li>
-                        <li><a href="#"
-                                class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign
-                                out</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
+                <!-- data other then sidebar -->
+            </div>
+        </div>
     </div>
+
+
+
+
 
 
     <footer>

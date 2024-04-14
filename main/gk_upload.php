@@ -42,7 +42,7 @@ if (isset($_POST["submit"])) {
     $explanation = $_POST["explanation"];
 
     // Use prepared statement to avoid SQL injection
-    $sql = "INSERT INTO `gk_test`(`topic_name`, `gk_question`, `gk_option1`, `gk_option2`, `gk_option3`, `gk_option4`, `gk_answer`, `gk_explanation`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO `gk_data`(`topic_name`, `gk_question`, `gk_option1`, `gk_option2`, `gk_option3`, `gk_option4`, `gk_answer`, `gk_explanation`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
     // Prepare the SQL statement
     $stmt = mysqli_prepare($conn, $sql);
